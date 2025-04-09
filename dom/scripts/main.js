@@ -23,10 +23,17 @@ if(numBtn){
 
 if(nextBtn){
     nextBtn.classList.add("btn-info");
-    
 }
 nextBtn.addEventListener("click", (e)=> {
     counter++;
+    SetNumBtn(counter);    
+});
+
+prevBtn.addEventListener("click", (e)=> {
+    if(counter<2){
+        return;
+    }
+    counter--;
     SetNumBtn(counter);    
 });
 
